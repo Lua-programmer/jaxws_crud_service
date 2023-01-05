@@ -78,6 +78,26 @@
                     </dependency>
                 </dependencies>
             </plugin>
+<!--            Plugin que vai gerar o wsdl-->
+            <plugin>
+                <groupId>com.sun.xml.ws</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>wsgen</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sei>org.example.service.NoticiaSIB.java</sei>
+                    <genWsdl>true</genWsdl>
+                    <resourceDestDir>${project.build.outputDirectory}/
+                    </resourceDestDir>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>
