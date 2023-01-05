@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:ns0="http://service.example.org/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.example.org/">
+   <xsd:complexType name="noticia">
+      <xsd:sequence>
+         <xsd:element name="data" type="xsd:dateTime" minOccurs="0"/>
+         <xsd:element name="id" type="xsd:long"/>
+         <xsd:element name="texto" type="xsd:string" minOccurs="0"/>
+         <xsd:element name="titulo" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="adicionar">
+      <xsd:sequence>
+         <xsd:element name="arg0" type="ns0:noticia" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="adicionarResponse">
+      <xsd:sequence>
+         <xsd:element name="return" type="xsd:long"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="alterar">
+      <xsd:sequence>
+         <xsd:element name="arg0" type="ns0:noticia" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="alterarResponse">
+      <xsd:sequence>
+         <xsd:element name="return" type="ns0:noticia" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="apagar">
+      <xsd:sequence>
+         <xsd:element name="arg0" type="xsd:long"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="apagarResponse">
+      <xsd:sequence>
+         <xsd:element name="return" type="xsd:boolean"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ler">
+      <xsd:sequence>
+         <xsd:element name="arg0" type="xsd:long"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="lerResponse">
+      <xsd:sequence>
+         <xsd:element name="return" type="ns0:noticia" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="listar"/>
+   <xsd:complexType name="listarResponse">
+      <xsd:sequence>
+         <xsd:element name="return" type="ns0:noticia" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="adicionar" type="ns0:adicionar"/>
+   <xsd:element name="adicionarResponse" type="ns0:adicionarResponse"/>
+   <xsd:element name="alterar" type="ns0:alterar"/>
+   <xsd:element name="alterarResponse" type="ns0:alterarResponse"/>
+   <xsd:element name="apagar" type="ns0:apagar"/>
+   <xsd:element name="apagarResponse" type="ns0:apagarResponse"/>
+   <xsd:element name="ler" type="ns0:ler"/>
+   <xsd:element name="lerResponse" type="ns0:lerResponse"/>
+   <xsd:element name="listar" type="ns0:listar"/>
+   <xsd:element name="listarResponse" type="ns0:listarResponse"/>
+</xsd:schema>

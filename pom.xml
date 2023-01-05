@@ -91,10 +91,9 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <sei>org.example.service.NoticiaSIB.java</sei>
+                    <sei>org.example.service.NoticiaSIB</sei>
                     <genWsdl>true</genWsdl>
-                    <resourceDestDir>${project.build.outputDirectory}/
-                    </resourceDestDir>
+                    <resourceDestDir>src/main/java</resourceDestDir>
                 </configuration>
             </plugin>
 

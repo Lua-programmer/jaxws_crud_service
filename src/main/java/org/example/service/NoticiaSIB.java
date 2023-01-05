@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebService(endpointInterface = "org/example/service/NoticiaSEI.java") //vai especificar o caminho da interface
+@WebService(endpointInterface = "org.example.service.NoticiaSEI") //vai especificar o caminho da interface
 public class NoticiaSIB implements NoticiaSEI {
 
     @Override
