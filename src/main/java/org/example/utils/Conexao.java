@@ -11,7 +11,7 @@ public class Conexao {
         try {
             Class.forName("org.postgresql.Driver"); //coloca em memória o driver do postgresql
             return DriverManager.getConnection( //utiliza o método getConnection para se conectar com o banco
-                    "jdbc:postgresql://localhost:5432/jax-ws-crud-service", "postgres", "mysecretpassword"
+                    "jdbc:postgresql://localhost:5432/jax_ws_crud_service", "postgres", "mysecretpassword"
             );
         } catch (Exception ex) {
             System.out.println("Conexão falhou: " + ex.getMessage());
